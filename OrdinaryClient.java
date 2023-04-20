@@ -1,10 +1,11 @@
+    // Создание класса OrdinaryClient, наследника абстрактного класса Actor
 public class OrdinaryClient extends Actor {
-
+    // Конструктор класса OrdinaryClient
     public OrdinaryClient(String name)
     {
         super(name);
     }
-
+    // Метод для вызова имени экземпляра
     @Override
     public String getName() {        
         return super.name;
@@ -29,7 +30,7 @@ public class OrdinaryClient extends Actor {
     public void setTakeOrder(boolean pickUpOrder) {
        super.isTakeOrder = pickUpOrder;   
     }
-
+    // Получение данных экземпляра класса
     @Override
     public Actor getActor() {
         return this;

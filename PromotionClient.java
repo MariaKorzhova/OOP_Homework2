@@ -1,18 +1,19 @@
+    // Создание класса PromotionClient, наследника абстрактного класса Actor
 public class PromotionClient extends Actor{
     public String PromotionName;
     public static int ClientPromotionNimber;
-
+    // Конструктор класса PromotionClient
     public PromotionClient(String name,String PromotionName, int ClientPromotionNimber){
         super(name);
         this.PromotionName = PromotionName;
         this.ClientPromotionNimber = ClientPromotionNimber;
     }
-
+    // Метод для вызова имени экземпляра
     @Override
     public String getName() {
         return super.name;
     }
-
+    // Получение данных экземпляра класса
     @Override
     public Actor getActor() {
         return this;

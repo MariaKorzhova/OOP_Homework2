@@ -1,16 +1,17 @@
+    // Создание класса SpecialClient, наследника абстрактного класса Actor
 public class SpecialClient extends Actor{
     private int idVIP;
-
+    // Конструктор класса SpecialClient
     public SpecialClient(String name, int idVIP){
         super(name);
         this.idVIP = idVIP;
     }
-
+    // Метод для вызова имени экземпляра
     @Override
     public String getName() {
         return super.name;
     }
-
+    // Получение номера VIP карты клиента
     public int getIdVIP() {
         return idVIP;
     }
@@ -34,7 +35,7 @@ public class SpecialClient extends Actor{
     public void setTakeOrder(boolean pickUpOrder) {
        super.isTakeOrder = pickUpOrder;   
     }
-
+    // Получение данных экземпляра класса
     @Override
     public Actor getActor() {
         return this;

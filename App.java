@@ -1,4 +1,4 @@
-
+    // Создание самого приложения, которое будет выводить все действия клиентов по порядку
 public class App {
     public static void main(String[] args) throws Exception {
     //    Market market = new Market();

@@ -20,7 +20,7 @@ public class OrdinaryClient extends Actor {
     public boolean isTakeOrder() {
         return super.isTakeOrder;
     }
-
+    // Метод, который устанавливает значение переменной isMakeOrder, равное входящей переменной makeOrder
     @Override
     public void setMakeOrder(boolean makeOrder) {
        super.isMakeOrder = makeOrder;

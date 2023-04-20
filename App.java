@@ -1,3 +1,5 @@
+import java.util.ArrayList;
+import java.util.List;
     // Создание самого приложения, которое будет выводить все действия клиентов по порядку
 public class App {
     public static void main(String[] args) throws Exception {
@@ -20,6 +22,8 @@ public class App {
        market.acceptToMarket(item2);
        market.acceptToMarket(item3);
        market.acceptToMarket(item4);
+    //    List <iActorBehaviour> actors = new List <iActorBehaviour>(item1, item2, item3, item4);
+    //    market.ReturnOrder();
        market.update();
     }
 }

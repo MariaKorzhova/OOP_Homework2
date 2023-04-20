@@ -1,7 +1,7 @@
 import java.util.ArrayList;
 import java.util.List;
     // Создание класса Market и подключение к интерфейсам iMarketBehaviour,iQueueBehaviour,iReturnOrder
-public class Market implements iMarketBehaviour,iQueueBehaviour,iReturnOrder{
+public class Market implements iMarketBehaviour,iQueueBehaviour,iReturnOrder {
     //private List<Actor> queue;
     private List<iActorBehaviour> queue;
     // Конструктор класса Market
@@ -27,10 +27,11 @@ public class Market implements iMarketBehaviour,iQueueBehaviour,iReturnOrder{
         {
             System.out.println(actor.getName()+" клиент ушел из магазина ");
             queue.remove(actor);
+            ReturnOrder(actor);
         }
         
     }
-    // Обновление данных по приёме заказа, выдаче и удалении из очереди.
+    // Обновление данных по приёму заказа, выдаче и удалении из очереди.
     @Override
     public void update() {
        takeOrder();
@@ -83,44 +84,16 @@ public class Market implements iMarketBehaviour,iQueueBehaviour,iReturnOrder{
     }
     
     @Override
-    public void CheckItem() {
-        // TODO Auto-generated method stub
-        
-    }
-
-    @Override
-    public void GetMoney() {
-        // TODO Auto-generated method stub
-        
-    }
-
-    @Override
     public void ReturnOrder() {
-        // TODO Auto-generated method stub
-        
-    }
-
-    @Override
-    public void ProductDoesNotFit() {
-        
-        
-    }
-
-    @Override
-    public void ProductHasDefect() {
-        
-        
-    }
-
-    @Override
-    public void setProductDoesNotFit(boolean DoesNotFit) {
-        
-        
-    }
-
-    @Override
-    public void setProductHasDefect(boolean ProductHasDefect) {
-        // TODO Auto-generated method stub
-        
+        // for(iActorBehaviour actor:actors)
+        // {
+            if(actor.isTakeOrder())
+            {
+                actor.setTakeOrder(false);
+                System.out.println(actor.getActor().getName()+" товар возвращён в магазин ");
+            }
+        // }
     }
 }
+    
+    

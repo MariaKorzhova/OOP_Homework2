@@ -10,12 +10,12 @@ public class OrdinaryClient extends Actor {
     public String getName() {        
         return super.name;
     }
-
+    // Метод для вызова boolean переменной экземпляра (сделан ли заказ)
     @Override
     public boolean isMakeOrder() {
         return super.isMakeOrder;
     }
-
+    // Метод для вызова boolean переменной экземпляра (взят ли заказ)
     @Override
     public boolean isTakeOrder() {
         return super.isTakeOrder;
@@ -25,7 +25,7 @@ public class OrdinaryClient extends Actor {
     public void setMakeOrder(boolean makeOrder) {
        super.isMakeOrder = makeOrder;
     }
-
+    // Метод, который устанавливает значение boolean переменной экземпляра (взят ли заказ) по входной boolean переменной
     @Override
     public void setTakeOrder(boolean pickUpOrder) {
        super.isTakeOrder = pickUpOrder;   

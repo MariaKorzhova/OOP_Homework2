@@ -22,8 +22,14 @@ public class App {
        market.acceptToMarket(item2);
        market.acceptToMarket(item3);
        market.acceptToMarket(item4);
-    //    List <iActorBehaviour> actors = new List <iActorBehaviour>(item1, item2, item3, item4);
-    //    market.ReturnOrder();
+   
        market.update();
+
+       market.acceptToMarket(item1);
+       market.acceptToMarket(item2);
+       market.acceptToMarket(item3);
+       market.acceptToMarket(item4);
+
+       market.ReturnOrder();
     }
 }

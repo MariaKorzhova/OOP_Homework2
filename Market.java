@@ -27,7 +27,6 @@ public class Market implements iMarketBehaviour,iQueueBehaviour,iReturnOrder {
         {
             System.out.println(actor.getName()+" клиент ушел из магазина ");
             queue.remove(actor);
-            ReturnOrder(actor);
         }
         
     }
@@ -83,16 +82,22 @@ public class Market implements iMarketBehaviour,iQueueBehaviour,iReturnOrder {
         
     }
     
+    // Метод возврата товара в магазин, выход из очереди и выхода из магазина
     @Override
     public void ReturnOrder() {
-        // for(iActorBehaviour actor:actors)
-        // {
+        List<Actor> releaseActors = new ArrayList<>();
+        for(iActorBehaviour actor:queue)
+        {
             if(actor.isTakeOrder())
             {
                 actor.setTakeOrder(false);
-                System.out.println(actor.getActor().getName()+" товар возвращён в магазин ");
+                System.out.println(actor.getActor().getName()+" вернул товар в магазин ");
+
+                releaseActors.add(actor.getActor());
+                System.out.println(actor.getActor().getName()+" клиент ушел из очереди ");
             }
-        // }
+        }
+    releaseFromMarket(releaseActors);
     }
 }
     
